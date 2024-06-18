@@ -13,6 +13,11 @@
         <a href="#">
           <img src="svg/noemi-logo.svg" alt="noemi" class="logo" width="180">
         </a>
+        <div class="burger-menu">
+          <div class="burger">
+            <span></span>
+       </div>
+    </div>
         <nav class="header-navigation">
           <ul class="menu">
             <li class="menu-item">
@@ -510,9 +515,18 @@
   </h2>
   <section class="shop-section">
     <div class="wrp-description">
-      <figure class="shop-post-media">
-        <img src="images/shop-item-desk1.jpg" alt="подушка" class="shop-post-image">
-      </figure>
+      <picture>
+        <source 
+        media="(min-width: 1200px)"
+        srcset="images/shop-item-desk1.jpg">
+        <source 
+        media="(min-width: 641px) and (max-width: 1200px)"
+        srcset="images/shop-item-tablet1.jpg">
+        <source 
+        media="(max-width: 640px)"
+        srcset="images/shop-item-mobile1.jpg">
+        <img class="shop-post-image" src="images/shop-item-desk1.jpg" alt="подушка">
+      </picture>
       <div class="shop-description">
         <h3 class="new-post-tittle">
           <a class="new-post-tittle-link" href="#">
@@ -531,9 +545,18 @@
       </div>
     </div>
     <div class="wrp-description">
-      <figure class="shop-post-media">
-        <img src="images/shop-item-desk2.jpg" alt="зайчик" class="shop-post-image">
-      </figure>
+      <picture>
+        <source 
+        media="(min-width: 1200px)"
+        srcset="images/shop-item-desk2.jpg">
+        <source 
+        media="(min-width: 641px) and (max-width: 1200px)"
+        srcset="images/shop-item-tablet2.jpg">
+        <source 
+        media="(max-width: 640px)"
+        srcset="images/shop-item-mobile2.jpg">
+        <img class="shop-post-image" src="images/shop-item-desk2.jpg" alt="зайчик">
+      </picture>
       <div class="shop-description">
         <h3 class="new-post-tittle">
           <a class="new-post-tittle-link" href="#">
@@ -551,9 +574,18 @@
       </div>
     </div>
     <div class="wrp-description">
-      <figure class="shop-post-media">
-        <img src="images/shop-item-desk3.jpg" alt="рамка" class="shop-post-image">
-      </figure>
+      <picture>
+        <source 
+        media="(min-width: 1200px)"
+        srcset="images/shop-item-desk3.jpg">
+        <source 
+        media="(min-width: 641px) and (max-width: 1200px)"
+        srcset="images/shop-item-tablet3.jpg">
+        <source 
+        media="(max-width: 640px)"
+        srcset="images/shop-item-mobile3.jpg">
+        <img class="shop-post-image" src="images/shop-item-desk3.jpg" alt="рамка">
+      </picture>
       <div class="shop-description">
         <h3 class="new-post-tittle">
           <a class="new-post-tittle-link" href="#">
