@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: opensans-bold;
-  src: url(../fonts/OpenSans-Bold.ttf);
+  src: url(https://github.com/netology-code/html-2-diploma/raw/master/sources/fonts/OpenSans-Bold.woff);
 }
 
 @font-face {
   font-family: opensans-regular;
-  src: url(../fonts/OpenSans-Regular.ttf);
+  src: url(https://github.com/netology-code/html-2-diploma/raw/master/sources/fonts/OpenSans-Regular.woff);
 }
 
 body {
@@ -34,7 +34,7 @@ p {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   padding: 0 15px;
   box-sizing: border-box;
@@ -74,7 +74,7 @@ p {
 }
 
 .header {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url("https://github.com/netology-code/html-2-diploma/blob/master/sources/images/banner-bg.jpg?raw=true");
   background-size: cover;
   position: relative;
   padding: 30px 0;
@@ -103,28 +103,30 @@ p {
 }
 /* =========== TREND =========== */
 .wrp-trend {
-  
+  display: flex;
+  justify-content: center;
 }
 .trend {
-  display: flex;
-  flex-direction: column;
-  
-
-  width: 365px;
-  height: 140px;
+  position: relative;
+  width: 100%;
   border: 3px solid #b59f5b;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
 
-  max-height: 300px;
-  z-index: 2;
-  position: absolute;
 }
 .trend-content {
   display: flex;
   gap: 5px;
 }
 .picture {
+  display: flex;
+  align-items: flex-end;
   min-height: 315px;
-  width: 400px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -142,19 +144,19 @@ p {
 }
 
 .picture-first {
-  background-image: url(../images/trend1.jpg);
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend1.jpg?raw=true");
 }
 
 .picture-second {
-  background-image: url(../images/trend2.jpg);
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend2.jpg?raw=true");
 }
 
 .picture-third {
-  background-image: url(../images/trend3.jpg);
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend3.jpg?raw=true");
 }
 
 .picture-end {
-  background-image: url(../images/trend4.jpg);
+  background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend4.jpg?raw=true");
 }
 
 .post-trend {
@@ -272,7 +274,7 @@ p {
   line-height: 18px;
   text-transform: uppercase;
   color: #0f0d0e;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .new {
@@ -356,7 +358,7 @@ button {
 
 .post-search-button {
   background-color: #b59f5b;
-  background-image: url(../svg/search.svg);
+  background-image: url("https://raw.githubusercontent.com/netology-code/html-2-diploma/49254f5a99cc931a884ff9396cab1b1495830519/sources/images/search.svg");
   background-repeat: no-repeat;
   border: none;
   width: 49px;
@@ -458,8 +460,11 @@ button {
 
 .shop-section {
   display: flex;
-  margin-left: 180px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
+  gap: 68px;
+  max-width: 1200px;
 }
 
 .shop-post-image {
@@ -469,16 +474,17 @@ button {
   text-align: left;
   border: 3px solid #b59f5b;
   width: 340px;
-  height: 265px;
   padding-top: 65px;
   padding-right: 20px;
   padding-left: 20px;
   margin-top: -40px;
+  flex-grow: 1;
 }
 
 .wrp-description {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-grow: 2;
 }
 
 .shop-post-media {
@@ -522,8 +528,11 @@ button {
   cursor: pointer;
   border: none;
   background-color: #b59f5b;
-  color: #fff;
-  font-weight: bold;
+  font-family: opensans-bold, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  color: #f1eee4;
+  
 }
 
 .button-shop:hover {
@@ -569,14 +578,14 @@ button {
 }
 
 .dribble-icon {
-  background-image: url(../svg/001-dribbble.svg);
+  background-image: url("https://raw.githubusercontent.com/netology-code/html-2-diploma/49254f5a99cc931a884ff9396cab1b1495830519/sources/images/social/001-dribbble.svg");
 }
 
 .pinterest-icon {
-  background-image: url(../svg/001-pinterest.svg);
+  background-image: url("https://raw.githubusercontent.com/netology-code/html-2-diploma/49254f5a99cc931a884ff9396cab1b1495830519/sources/images/social/002-pinterest.svg");
 }
 .tumblr-icon {
-  background-image: url(../svg/003-tumblr.svg);
+  background-image: url("https://raw.githubusercontent.com/netology-code/html-2-diploma/49254f5a99cc931a884ff9396cab1b1495830519/sources/images/social/003-tumblr.svg");
 }
 .copyright {
   display: flex;
@@ -586,4 +595,228 @@ button {
   margin-bottom: 40px;
   font-size: 12px;
   color: #bfbfbf;
+}
+
+/* =========== TABLET =========== */
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header {
+    background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/banner-bg-tablet.jpg?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+  }
+  
+  .header-navigation {
+    display: none;
+  }
+  
+  .picture {
+    background-size: cover;
+     display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+   
+  
+  .burger {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+  }
+  .burger span {
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .header-tittle {
+    text-align: center;
+    margin: auto;
+    padding: 80px 0;
+  }
+  .menu {
+    display: none;
+  }
+  .trend-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+   
+  
+  .post {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .post-tags {
+    
+  }
+  
+  .shop-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .new-post {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-section {
+     display: flex;
+    flex-wrap: wrap;
+  }
+  
+}
+
+
+  @media (max-width: 641px) and (orientation: landscape) {
+    .trend-content {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    @media (max-width: 360px) {
+      .header {
+      background-image: url("https://github.com/netology-code/html-2-diploma/blob/master/sources/images/banner-bg.jpg?raw=true");
+      background-size: cover;
+    }
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .header-navigation {
+        display: none;
+      }
+      .header-tittle {
+        
+      }
+      
+      .trend-content {
+         display: flex;
+        flex-direction: column;
+      }
+      .container-main {
+        display: flex;
+        flex-direction: column;
+      }
+      .post {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .shop-section {
+         display: flex;
+        flex-direction: column;
+      }
+    }
+
+
+/* =========== POPAP =========== */
+
+.popup-wrp {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.popup-close-content {
+  position: relative;
+  max-width: 390px;
+  /*height: 590px;*/
+  background-color: #fff; 
+  display: none;
+  
+  
+}
+.btn {
+  display: none;
+}
+
+.popup-close {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
+}
+.form-popap {
+  display: flex;
+  flex-direction: column;
+  
+}
+.select {
+  width: 325px;
+  height: 50px;
+  margin-bottom: 35px;
+  
+}
+
+.radio-btn {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  
+}
+.text-popup {
+  display: flex;
+  flex-direction: column;
+}
+.textarea {
+  width: 325px;
+  height: 130px;
+  margin-top: 10px;
+}
+.button-form {
+  width: 325px;
+  height: 50px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+ 
+}
+.popup {
+  margin-left: 25px;
+  margin-top: 55px;
+  margin-right: 25px;
+}
+.span {
+  margin-bottom: 10px
+}
+.span-radio {
+  
 }
