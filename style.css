@@ -625,7 +625,7 @@ button {
     background-size: cover;
      display: flex;
     flex-wrap: wrap;
-    width: 45%;
+    width: calc(50% - 3px)
   }
 
   .post-content {
@@ -693,7 +693,7 @@ button {
   .shop-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   .new-post {
@@ -708,7 +708,7 @@ button {
 }
 
 
-  @media (max-width: 641px) and (orientation: landscape) {
+  @media (max-width: 641px)  {
     .trend-content {
       display: flex;
       flex-direction: column;
@@ -783,89 +783,126 @@ button {
       .burger::after {
         bottom: 0;
     }
+  }
 
 
 
 /* =========== POPAP =========== */
 
 .popup-wrp {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    position: relative;
+  }
+  .popup-wrp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .popup-close-content {
+    position: relative;
+    max-width: 390px;
+    /*height: 590px;*/
+    background-color: #fff; 
+    
+  }
+  .btn {
+   
+    /*display: none;*/
+  }
   
-}
-.popup-close-content {
-  position: relative;
-  max-width: 390px;
-  /*height: 590px;*/
-  background-color: #fff; 
-  display: none;
+  .popup-close {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -5px;
+    top: -25px;
+    cursor: pointer;
+    background-image: url("svg/form-x.svg");
+     
+  }
   
-  
-}
-.btn {
-  display: none;
-}
+  .form-popap {
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+  .select {
+    width: 325px;
+    height: 50px;
+    margin-bottom: 35px;
+    background-color: #f4f7f6;
+    border: none;
+  }
+  .value {
+    background-image: url("svg/form-arrows.svg");
+    
+  }
+  .radio-btn {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    
+  }
+  .text-popup {
+    display: flex;
+    flex-direction: column;
+  }
+  .textarea {
+    width: 325px;
+    height: 130px;
+    margin-top: 10px;
+    background-color: #f4f7f6;
+    border: none;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  .button-form {
+    width: 325px;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    background-color: #b59f5b;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+   
+  }
 
-.popup-close {
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  right: -10px;
-  top: -10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  
-}
-.form-popap {
-  display: flex;
-  flex-direction: column;
-  
-}
-.select {
-  width: 325px;
-  height: 50px;
-  margin-bottom: 35px;
-  
-}
+  .button-form:hover {
+    background-color: #323232;
+    }
 
-.radio-btn {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 35px;
+  .popup {
+    margin-left: 25px;
+    margin-top: 55px;
+    margin-right: 25px;
+  }
+  .span {
+    margin-bottom: 10px
+  }
   
-}
-.text-popup {
-  display: flex;
-  flex-direction: column;
-}
-.textarea {
-  width: 325px;
-  height: 130px;
-  margin-top: 10px;
-}
-.button-form {
-  width: 325px;
-  height: 50px;
-  margin-top: 25px;
-  margin-bottom: 50px;
- 
-}
-.popup {
-  margin-left: 25px;
-  margin-top: 55px;
-  margin-right: 25px;
-}
-.span {
-  margin-bottom: 10px
+  .yes {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .no {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
