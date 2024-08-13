@@ -467,6 +467,7 @@ button {
   margin-top: 30px;
   padding: 0 50px;
   max-width: 1200px;
+  gap: 36px;
 }
 
 
@@ -533,8 +534,11 @@ button {
   font-size: 14px;
   line-height: 40px;
   color: #f1eee4;
-  
+  display: flex;
+  justify-content: center;
 }
+
+
 
 .button-shop:hover {
   background-color: #323232;
@@ -600,7 +604,7 @@ button {
 
 /* =========== TABLET =========== */
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 641px) {
   .header {
     background-image: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/banner-bg-tablet.jpg?raw=true");
     background-repeat: no-repeat;
@@ -618,14 +622,13 @@ button {
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
-      width: 50%;
   }
   
   .picture {
     background-size: cover;
      display: flex;
     flex-wrap: wrap;
-    width: calc(50% - 3px)
+    width: 45%;
   }
 
   .post-content {
@@ -637,6 +640,7 @@ button {
     justify-content: space-between;
     gap: 80px;
   }
+  
   
   
   .burger {
@@ -708,12 +712,12 @@ button {
 }
 
 
-  @media (max-width: 640px)  {
+  @media (max-width: 1200px) and (min-width: 641px) and (orientation: landscape) {
     .trend-content {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      width: 50%;
+      width: 25%;
     }
   }
     
@@ -746,7 +750,46 @@ button {
       .burger::after {
         bottom: 0;
     }
-  }
+
+    @media (max-width: 640px) {
+
+    .header {
+      background-image: url("https://github.com/netology-code/html-2-diploma/blob/master/sources/images/banner-bg.jpg?raw=true");
+      background-size: cover;
+    }
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .header-navigation {
+        display: none;
+      }
+      
+      .trend-content {
+         display: flex;
+        flex-direction: column;
+      }
+
+      .container-main {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .post {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .shop-section {
+         display: flex;
+        flex-direction: column;
+      }
+    }
+
+  
 
 
 
@@ -762,10 +805,12 @@ button {
     position: relative;
   }
   .popup-wrp {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -776,7 +821,6 @@ button {
   .popup-close-content {
     position: relative;
     max-width: 390px;
-    /*height: 590px;*/
     background-color: #fff; 
     
   }
